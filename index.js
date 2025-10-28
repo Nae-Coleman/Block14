@@ -18,10 +18,9 @@ function getSum(numbers) {
     sum += numbers[i];
     i++;
   }
-  // TODO
   return sum;
 }
-
+// TODO
 
 /**
  * @param {number[]} numbers an array of integers
@@ -54,13 +53,13 @@ function getMin(numbers) {
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  let max = numbers[0]
-  let i = 1
-  while (i > numbers.length) {
-    if (numbers[i]) > max) {
-      max = number [i];
+  let max = numbers[0];
+  let i = 1;
+  while (i < numbers.length) {
+    if (numbers[i] > max) {
+      max = numbers[i];
     }
-    i++
+    i++;
   }
   return max;
   // TODO
@@ -71,6 +70,10 @@ function getMax(numbers) {
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
+  const min = Math.min(...numbers);
+  const max = Math.max(...numbers);
+  const range = max - min;
+  return range;
   // TODO
 }
 
@@ -79,6 +82,13 @@ function getRange(numbers) {
  * @returns {number[]} the even numbers in the array
  */
 function getEvens(numbers) {
+  const evens = [];
+  for (const n of numbers) {
+    if (n % 2 === 0) {
+      evens.push(n);
+    }
+  }
+  return evens;
   // TODO
 }
 
@@ -87,7 +97,14 @@ function getEvens(numbers) {
  * @returns {number[]} the odd numbers in the array
  */
 function getOdds(numbers) {
+  const odds = [];
+  for (const n of numbers) {
+    if (n % 2 === 1) {
+      odds.push(n);
+    }
+  }
   // TODO
+  return odds;
 }
 
 // === READ BUT DO NOT EDIT THE CODE BELOW ===
